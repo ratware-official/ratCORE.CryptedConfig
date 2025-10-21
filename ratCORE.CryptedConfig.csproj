@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Company>ratware</Company>
+    <Authors>Tom V. (ratware)</Authors>
+    <Product>ratCORE.CryptedSettings</Product>
+    <Description>Manage encrypted application config via AES-GCM algorithm.</Description>
+    <Copyright>Copyright © 2025 ratware</Copyright>
+    <PackageLicenseExpression>CC-BY-4.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/ratware-official/ratCORE</RepositoryUrl>
+    <Version>1.0.9398.867</Version>
+    <FileVersion>1.0.9398.867</FileVersion>
+  </PropertyGroup>
+
+</Project>
