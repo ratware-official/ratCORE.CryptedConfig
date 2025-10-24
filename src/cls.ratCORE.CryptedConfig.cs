@@ -597,8 +597,18 @@ namespace ratCORE.CryptedConfig
                 // decrypt
                 byte[] plaintext = new byte[ciphertext.Length];
                 byte[] headerBytes = header.ToArray();
-                using (var gcm = new AesGcm(dek, tagSizeInBytes: 16))
-                    gcm.Decrypt(nonce, ciphertext, tag, plaintext, associatedData: headerBytes);
+                try
+                {
+                    using (var gcm = new AesGcm(dek, tagSizeInBytes: 16))
+                        gcm.Decrypt(nonce, ciphertext, tag, plaintext, associatedData: headerBytes);
+                }
+                catch (CryptographicException ex)
+                {
+                    // mapping CryptographicException as InvalidDataException
+                    throw new InvalidDataException(
+                        ex.Message,
+                        ex );
+                }
 
                 // deserialize JSON
                 return JsonSerializer.Deserialize<CryptedConfig>(plaintext, JsonOpts)!;
