@@ -2,7 +2,7 @@
  * 
  * Program:                         ratCORE.CryptedConfig
  * Description:                     Manage encrypted application config via AES-GCM algorithm.
- * Current Version:                 1.0.9398.867 (24.09.2025)
+ * Current Version:                 1.0.9428.1429 (24.10.2025)
  * Company:                         ratware
  * Author:                          Tom V. (ratware)
  * Email:                           info@ratware.de
@@ -15,6 +15,10 @@
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 
  * History:
+ * 
+ *     - 24.10.2025 - Tom V. (ratware) - Version 1.0.9428.1429
+ *       Change in 'Load()' method.
+ *       - Mapping 'CryptographicException' as 'InvalidDataException' while AES-GCM decryption.
  * 
  *     - 24.09.2025 - Tom V. (ratware) - Version 1.0.9398.867
  *       Reviewed and approved
